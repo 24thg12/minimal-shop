@@ -49,7 +49,7 @@ export function TopBar({ cartItemCount, onCartClick, onSearch }: TopBarProps) {
           rel="noopener noreferrer"
           className="text-sm font-medium text-zinc-800 dark:text-zinc-200 shrink-0"
         >
-          Shop
+          Shop Mini
         </Link>
         <div className="flex-1 px-8 overflow-x-auto flex items-center justify-center gap-6 scrollbar-none">
           {categories.map((category) => (

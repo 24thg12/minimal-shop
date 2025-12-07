@@ -18,7 +18,7 @@ export function Header({ cartCount, onCartOpen, searchQuery, onSearchChange }: H
             <button type="button" className="p-2 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-full">
               <Menu className="w-4 h-4" />
             </button>
-            <span className="text-sm font-medium">Store</span>
+            <span className="text-sm font-medium">Store Mini</span>
           </div>
 
           <div className="flex-1 max-w-md">
