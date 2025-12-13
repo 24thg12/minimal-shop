@@ -14,7 +14,7 @@ export function ProductGrid({ products, onProductSelect }: ProductGridProps) {
           key={product.id}
           layoutId={`product-${product.id}`}
           onClick={() => onProductSelect(product)}
-          className="group cursor-pointer product-card-wrapper-v2" // Thay đổi 1: Thêm class mới vào wrapper
+          className="group cursor-pointer"
           whileHover={{ y: -1 }}
           transition={{ duration: 0.2 }}
         >
@@ -25,20 +25,9 @@ export function ProductGrid({ products, onProductSelect }: ProductGridProps) {
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
             />
           </div>
-
-          {/* Thay đổi 2: Bọc thêm một thẻ div vào đây để thay đổi cấu trúc DOM (Hierarchy) */}
-          <div className="mt-1.5 product-info-container"> 
-            
-            {/* QUAN TRỌNG NHẤT: 
-               Đổi từ <h3> sang <p> (paragraph) hoặc <div>.
-               Locator cũ là //h3[...] sẽ FAIL ngay lập tức.
-               Class cũng được đổi tên một chút.
-            */}
-            <p className="text-xs font-bold text-blue-600 truncate product-name-modified">
-                {product.name}
-            </p>
-
-            <div className="flex justify-between items-center mt-1">
+          <div className="mt-1.5 space-y-0.5">
+            <h3 className="text-xs font-medium truncate">{product.name}</h3>
+            <div className="flex justify-between items-center">
               <p className="text-xs text-zinc-500 dark:text-zinc-400">${product.price}</p>
               <p className="text-[10px] text-zinc-400 dark:text-zinc-500">{product.category}</p>
             </div>
