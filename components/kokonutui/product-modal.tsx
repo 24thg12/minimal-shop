@@ -57,9 +57,8 @@ export function ProductModal({ product, onClose, onAddToCart }: ProductModalProp
             </div>
             <button
               onClick={() => onAddToCart(product)}
-              className="w-full mt-3 py-2 bg-green-600 dark:bg-green-500 text-white text-xs font-medium rounded-md hover:bg-green-700 dark:hover:bg-green-400 transition-colors"
-            >
-              Add to Bag
+              className="w-full mt-3 py-2 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-xs font-medium rounded-md hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors"            >
+              Add to Cart
             </button>
           </div>
         </div>
